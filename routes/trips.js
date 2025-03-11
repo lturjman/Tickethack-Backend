@@ -19,7 +19,7 @@ router.get("/search", async (req, res) => {
     date,
   });
 
-  res.status(200).json(trips);
+  res.status(200).json({ trips });
 });
 
 module.exports = router;
