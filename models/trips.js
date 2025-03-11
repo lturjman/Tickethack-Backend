@@ -8,6 +8,6 @@ const tripSchema = new mongoose.Schema({
 });
 
 // Création du modèle "Trip" basé sur ce schéma
-const Trip = mongoose.model("Trip", tripSchema,"trips");
+const Trip = mongoose.model("trips", tripSchema);
 
 module.exports = Trip;
