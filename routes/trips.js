@@ -33,8 +33,6 @@ router.post("/bookings", (req, res) => {
   res.json();
 });
 
-module.exports = router;
-
 // Récupérer les réservations
 router.get("/bookings", (req, res) => {
   res.json();
