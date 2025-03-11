@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const moment = require("moment");
+const Trip = require("./trips");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
