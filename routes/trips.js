@@ -13,14 +13,12 @@ router.get("/", function (req, res, next) {
     .catch(err => res.status(500).json({ error: "Erreur serveur", details: err }));
 });*/
 
-
-
-router.get("/search", (req, res) => {
+router.get("/search", async (req, res) => {
   const { departure, arrival, date } = req.query;
   if (!departure || !arrival || !date) {
     return res.status(400).json({ error: "Tous les champs sont requis" });
   }
-  Trip.find({
+  const trips = await Trip.find({
     departure: { $regex: new RegExp(departure, "i") },
     arrival: { $regex: new RegExp(arrival, "i") },
     date,
