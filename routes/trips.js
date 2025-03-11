@@ -26,16 +26,4 @@ router.get("/search", async (req, res) => {
   }
 });
 
-// RESERVATION TRAJET
-// Créer une réservation
-
-router.post("/bookings", (req, res) => {
-  res.json();
-});
-
-// Récupérer les réservations
-router.get("/bookings", (req, res) => {
-  res.json();
-});
-
 module.exports = router;

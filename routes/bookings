@@ -1,0 +1,17 @@
+var express = require("express");
+var router = express.Router();
+require("../models/connection");
+
+// RESERVATION TRAJET
+// Créer une réservation
+
+router.post("/bookings", (req, res) => {
+  res.json();
+});
+
+// Récupérer les réservations
+router.get("/bookings", (req, res) => {
+  res.json();
+});
+
+module.exports = router;
