@@ -3,11 +3,10 @@ var router = express.Router();
 require("./models/connection");
 const Trip = require("./models/trips");
 
-/* GET users listing. */
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
 });
-
+// RECUPERER UN TRAJET SELON LES PARAMETRES ENTRÉS DANS LA REQUÊTE
 router.get("/search", async (req, res) => {
   const { departure, arrival, date } = req.query;
   if (!departure || !arrival || !date) {
@@ -25,6 +24,20 @@ router.get("/search", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Erreur lors de la recherche des trajets" });
   }
+});
+
+// RESERVATION TRAJET
+// Créer une réservation
+
+router.post("/bookings", (req, res) => {
+  res.json();
+});
+
+module.exports = router;
+
+// Récupérer les réservations
+router.get("/bookings", (req, res) => {
+  res.json();
 });
 
 module.exports = router;
