@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const tripSchema = new mongoose.Schema({
   departure: String, // Ville de départ
   arrival: String, // Ville d'arrivée
-  date: String, // Date du trajet
+  date: Date, // Date du trajet
   price: Number, // Prix du trajet
 });
 
 // Création du modèle "Trip" basé sur ce schéma
-const Trip = mongoose.model("Trip", tripSchema);
+const Trip = mongoose.model("Trip", tripSchema,"trips");
 
 module.exports = Trip;
