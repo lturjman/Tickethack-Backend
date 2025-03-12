@@ -15,10 +15,10 @@ router.post("/purchase", async (req, res) => {
 
   for (let i = 0; i < carts.length; i++) {
     let bookings = new Booking();
-    bookings.trip = carts[i].trip;
-    // bookings.departure = carts[i].trip.departure;
-    // bookings.arrival = carts[i].trip.arrival;
-    // bookings.date = carts[i].trip.date;
+    // bookings.trip = carts[i].trip;
+    bookings.trip.departure = carts[i].trip.departure;
+    bookings.trip.arrival = carts[i].trip.arrival;
+    bookings.trip.date = carts[i].trip.date;
     await bookings.save();
   }
 
