@@ -29,12 +29,10 @@ router.post("/purchase", async (req, res) => {
 
 // Récupérer les réservations
 router.get("/", (req, res) => {
-  Booking.find()
-    .populate("trip")
-    .then((data) => {
-      console.log(data);
-      res.status(200).json(data);
-    });
+  Booking.find().then((data) => {
+    console.log(data);
+    res.status(200).json(data);
+  });
 });
 
 module.exports = router;
