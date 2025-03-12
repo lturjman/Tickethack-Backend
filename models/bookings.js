@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema({
-  bookings: { type: mongoose.Schema.Types.ObjectId, ref: "bookings" }, // Liste des bookings
+  trip: { type: mongoose.Schema.Types.ObjectId, ref: "trips" },
   // departure: String, // Ville de départ
   // arrival: String, // Ville d'arrivée
   // date: Date, // Date du trajet
   // price: Number, // Prix du trajet
+  createdAt: { type: Date, default: Date.now }, // Date de la réservation
 });
 
 const Booking = mongoose.model("bookings", bookingSchema);

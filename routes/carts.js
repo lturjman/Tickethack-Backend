@@ -14,7 +14,6 @@ router.get("/", (req, res) => {
       res.status(200).json(data);
     });
 });
-// Ajouter un Trips au panier
 
 router.post("/add/:tripId", async (req, res) => {
   const tripId = req.params.tripId;
