@@ -19,6 +19,7 @@ router.post("/purchase", async (req, res) => {
     bookings.trip.departure = carts[i].trip.departure;
     bookings.trip.arrival = carts[i].trip.arrival;
     bookings.trip.date = carts[i].trip.date;
+    bookings.trip.price = carts[i].trip.price;
     await bookings.save();
   }
 
